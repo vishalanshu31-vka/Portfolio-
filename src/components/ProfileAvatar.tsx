@@ -174,5 +174,6 @@ export const ProfileAvatar: React.FC<ProfileAvatarProps> = ({
         </div>
       )}
     </div>
+    </div>
   );
 };
