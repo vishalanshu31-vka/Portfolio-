@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Sparkles, Camera, Shield, CheckCircle2, User, RefreshCw } from 'lucide-react';
 import { soundEffects } from '../utils/soundEffects';
@@ -13,52 +13,52 @@ interface ProfileAvatarProps {
 export const ProfileAvatar: React.FC<ProfileAvatarProps> = ({
   size = 'hero',
   showBadge = true,
-  interactive = true,
+  interactive = false,
   className = '',
 }) => {
-  const [customImage, setCustomImage] = useState<string | null>(null);
+  // const [customImage, setCustomImage] = useState<string | null>(null);
   const [imageError, setImageError] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  // const fileInputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
-    // Check if custom user avatar was saved
-    try {
-      const saved = localStorage.getItem('vka_user_avatar');
-      if (saved) {
-        setCustomImage(saved);
-      }
-    } catch (e) {
-      console.warn('LocalStorage unavailable for avatar');
-    }
-  }, []);
+  // useEffect(() => {
+  //   // Check if custom user avatar was saved
+  //   try {
+  //     const saved = localStorage.getItem('vka_user_avatar');
+  //     if (saved) {
+  //       setCustomImage(saved);
+  //     }
+  //   } catch (e) {
+  //     console.warn('LocalStorage unavailable for avatar');
+  //   }
+  // }, []);
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        const dataUrl = event.target?.result as string;
-        setCustomImage(dataUrl);
-        setImageError(false);
-        try {
-          localStorage.setItem('vka_user_avatar', dataUrl);
-        } catch (err) {}
-        soundEffects.playTransmissionSent();
-      };
-      reader.readAsDataURL(file);
-    }
-  };
+  // const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const file = e.target.files?.[0];
+  //   if (file) {
+  //     const reader = new FileReader();
+  //     reader.onload = (event) => {
+  //       const dataUrl = event.target?.result as string;
+  //       setCustomImage(dataUrl);
+  //       setImageError(false);
+  //       try {
+  //         localStorage.setItem('vka_user_avatar', dataUrl);
+  //       } catch (err) {}
+  //       soundEffects.playTransmissionSent();
+  //     };
+  //     reader.readAsDataURL(file);
+  //   }
+  // };
 
-  const handleResetAvatar = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setCustomImage(null);
-    setImageError(false);
-    try {
-      localStorage.removeItem('vka_user_avatar');
-    } catch (err) {}
-    soundEffects.playClick();
-  };
+  // const handleResetAvatar = (e: React.MouseEvent) => {
+  //   e.stopPropagation();
+  //   setCustomImage(null);
+  //   setImageError(false);
+  //   try {
+  //     localStorage.removeItem('vka_user_avatar');
+  //   } catch (err) {}
+  //   soundEffects.playClick();
+  // };
 
   // Dimensions based on size
   const sizeMap = {
@@ -91,7 +91,7 @@ export const ProfileAvatar: React.FC<ProfileAvatarProps> = ({
   const config = sizeMap[size];
 
   // Default high-fidelity stylized portrait representation of Vishal
-  const defaultPortraitImage = customImage || '/vishal_profile.jpg';
+  const defaultPortraitImage = '/Portfolio-/profile.jpeg';
 
   return (
     <div
@@ -103,13 +103,13 @@ export const ProfileAvatar: React.FC<ProfileAvatarProps> = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Hidden file input for easy photo updating */}
-      <input
+      {/* <input
         type="file"
         ref={fileInputRef}
         onChange={handleFileChange}
         accept="image/*"
         className="hidden"
-      />
+      /> */}
 
       {/* Outer Rotating HUD Radar Ring */}
       <motion.div
