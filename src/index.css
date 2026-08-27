@@ -1,0 +1,219 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Orbitron', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: 'Rajdhani', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-tech: 'Chakra Petch', monospace, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-tech {
+    font-family: var(--font-tech);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom futuristic scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+/* Elegant Dark Radial Dot Matrix Background */
+.bg-elegant-dots {
+  background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-elegant-dots-dense {
+  background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.07) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+/* Subtle Sci-Fi Grid Background */
+.bg-cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-cyber-grid-dense {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Elegant Dark HUD Corner and Accent Cards */
+.hud-corner {
+  clip-path: polygon(
+    0 12px, 
+    12px 0, 
+    calc(100% - 12px) 0, 
+    100% 12px, 
+    100% calc(100% - 12px), 
+    calc(100% - 12px) 100%, 
+    12px 100%, 
+    0 calc(100% - 12px)
+  );
+}
+
+.hud-corner-sm {
+  clip-path: polygon(
+    0 6px, 
+    6px 0, 
+    calc(100% - 6px) 0, 
+    100% 6px, 
+    100% calc(100% - 6px), 
+    calc(100% - 6px) 100%, 
+    6px 100%, 
+    0 calc(100% - 6px)
+  );
+}
+
+/* Glowing Neon Effects */
+.glow-red {
+  box-shadow: 0 0 25px rgba(220, 38, 38, 0.35), inset 0 0 15px rgba(220, 38, 38, 0.15);
+}
+
+.glow-red-subtle {
+  box-shadow: 0 0 15px rgba(220, 38, 38, 0.18);
+}
+
+.glow-red-intense {
+  box-shadow: 0 0 40px rgba(239, 68, 68, 0.6), 0 0 80px rgba(220, 38, 38, 0.3);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 12px rgba(239, 68, 68, 0.6), 0 0 24px rgba(220, 38, 38, 0.3);
+}
+
+/* Sci-fi Scanline effect */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Glowing animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes energyRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes energyRotateRev {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.animate-energy-rotate {
+  animation: energyRotate 28s linear infinite;
+}
+
+.animate-energy-rotate-fast {
+  animation: energyRotate 12s linear infinite;
+}
+
+.animate-energy-rotate-rev {
+  animation: energyRotateRev 22s linear infinite;
+}
+
+/* Print Styles for Authentic Resume Output */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  
+  /* Hide all app content when printing except the printable resume */
+  body > * {
+    visibility: hidden;
+  }
+
+  #resume-printable-area, #resume-printable-area * {
+    visibility: visible;
+  }
+
+  #resume-printable-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  @page {
+    size: letter portrait;
+    margin: 0.4in;
+  }
+}

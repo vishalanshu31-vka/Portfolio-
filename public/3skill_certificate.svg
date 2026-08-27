@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8faff"/>
+    </linearGradient>
+    <linearGradient id="blueAccentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2b5c"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00bcd4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="rightCurveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+
+    <!-- Dotted Grid Pattern -->
+    <pattern id="dotGrid" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.5" fill="#3b82f6" opacity="0.45"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="800" fill="url(#bgGrad)" />
+
+  <!-- Top Right Geometric Modern Shapes -->
+  <path d="M 680 0 L 740 60 L 680 120 L 610 60 Z" fill="#0ea5e9" opacity="0.9" />
+  <path d="M 660 0 L 890 0 L 890 120 L 740 60 Z" fill="#0f2b5c" />
+  <path d="M 890 0 L 1200 0 L 1200 240 L 1080 240 L 980 120 L 890 120 Z" fill="#1e3a8a" />
+  <path d="M 1080 0 L 1200 0 L 1200 120 Z" fill="#0284c7" />
+
+  <!-- Top Right Inner Inset Geometric Shape -->
+  <rect x="630" y="10" width="80" height="60" fill="none" stroke="#00bcd4" stroke-width="12" opacity="0.8" />
+  <rect x="800" y="40" width="120" height="90" fill="none" stroke="#ffffff" stroke-width="14" opacity="0.25" />
+
+  <!-- Right Edge Dynamic Curving Graphic Shapes -->
+  <path d="M 1200 350 C 1050 420, 940 540, 940 800 L 1200 800 Z" fill="url(#rightCurveGrad)" />
+  <path d="M 1200 480 C 1120 540, 1060 640, 1060 800 L 1200 800 Z" fill="#6366f1" opacity="0.6" />
+  <path d="M 1200 620 C 1170 660, 1140 720, 1140 800 L 1200 800 Z" fill="#c084fc" opacity="0.8" />
+
+  <!-- Dot Grid Accents -->
+  <rect x="410" y="235" width="96" height="40" fill="url(#dotGrid)" />
+  <rect x="750" y="450" width="96" height="40" fill="url(#dotGrid)" />
+
+  <!-- LEFT HEADER: 3 SKILL Logo -->
+  <g transform="translate(80, 45)">
+    <!-- 3D Geometric Logo Mark -->
+    <path d="M 0 35 L 20 0 L 48 20 L 32 55 Z" fill="#6366f1" />
+    <path d="M 32 55 L 48 20 L 76 35 L 56 68 Z" fill="#1d4ed8" />
+    <path d="M 56 68 L 76 35 L 98 52 L 80 82 Z" fill="#0ea5e9" />
+
+    <!-- Typography -->
+    <text x="0" y="102" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="28" fill="#111827" letter-spacing="1">3 SKILL</text>
+    <text x="0" y="122" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="10" fill="#4b5563" letter-spacing="2.5">LEARN-GROW-SUCCEED</text>
+  </g>
+
+  <!-- TITLE: Internship Completion Certificate -->
+  <text x="80" y="245" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="44" fill="#1e3a8a" letter-spacing="-0.5">
+    Internship Completion
+  </text>
+  <text x="80" y="295" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="40" fill="#1e3a8a" letter-spacing="-0.5">
+    Certificate
+  </text>
+
+  <!-- Awarded to Sub-Header -->
+  <text x="80" y="360" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="18" fill="#475569">
+    Awarded to
+  </text>
+
+  <!-- RECIPIENT NAME: Vishal Kumar Anshu -->
+  <text x="80" y="425" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="54" fill="#1d4ed8" letter-spacing="-0.5">
+    Vishal Kumar Anshu
+  </text>
+
+  <!-- Certificate Body Paragraph -->
+  <g transform="translate(80, 480)">
+    <text font-family="system-ui, -apple-system, sans-serif" font-size="17" fill="#1e293b" line-height="1.6">
+      <tspan x="0" dy="0" font-weight="500">This certificate confirms the </tspan>
+      <tspan font-weight="700">successful completion</tspan>
+      <tspan x="0" dy="28" font-weight="500">of 2 Month Internship in AIML at 3Skill Training. The</tspan>
+      <tspan x="0" dy="28" font-weight="500">program emphasized </tspan>
+      <tspan font-weight="700">practical skills, project-based</tspan>
+      <tspan x="0" dy="28" font-weight="700">learning, </tspan>
+      <tspan font-weight="500">and professional development aligned with</tspan>
+      <tspan x="0" dy="28" font-weight="500">industry expectations.</tspan>
+    </text>
+  </g>
+
+  <!-- SIGNATURES SECTION -->
+  <g transform="translate(620, 560)">
+    <!-- Satyajit Swain Signature Graphic -->
+    <path d="M 0 35 Q 25 5 45 40 T 85 20 T 115 35 T 145 15" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 20 40 L 130 38" fill="none" stroke="#0f172a" stroke-width="1.5" />
+    <text x="0" y="65" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="14" fill="#0f172a">Satyajit Swain</text>
+    <text x="0" y="83" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="12" fill="#475569">Founder &amp; CEO</text>
+
+    <!-- Adil Quadri Signature Graphic -->
+    <g transform="translate(260, 0)">
+      <path d="M 0 45 Q 30 -5 50 35 T 80 15 Q 100 45 125 10 T 150 30" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round" />
+      <path d="M 15 38 L 135 34" fill="none" stroke="#0f172a" stroke-width="1.5" />
+      <text x="0" y="65" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="14" fill="#0f172a">Adil Quadri</text>
+      <text x="0" y="83" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="12" fill="#475569">Co-Founder &amp; COO</text>
+    </g>
+  </g>
+
+  <!-- BOTTOM FOOTER & VERIFICATION STAMPS -->
+  <g transform="translate(80, 680)">
+    <!-- QR Code Graphic Mockup -->
+    <rect x="0" y="0" width="70" height="70" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
+    <!-- QR Code patterns -->
+    <rect x="8" y="8" width="20" height="20" fill="#0f172a" />
+    <rect x="12" y="12" width="12" height="12" fill="#ffffff" />
+    <rect x="15" y="15" width="6" height="6" fill="#0f172a" />
+    
+    <rect x="42" y="8" width="20" height="20" fill="#0f172a" />
+    <rect x="46" y="12" width="12" height="12" fill="#ffffff" />
+    <rect x="49" y="15" width="6" height="6" fill="#0f172a" />
+
+    <rect x="8" y="42" width="20" height="20" fill="#0f172a" />
+    <rect x="12" y="46" width="12" height="12" fill="#ffffff" />
+    <rect x="15" y="49" width="6" height="6" fill="#0f172a" />
+
+    <rect x="34" y="34" width="8" height="8" fill="#0f172a" />
+    <rect x="46" y="46" width="14" height="6" fill="#0f172a" />
+    <rect x="54" y="34" width="8" height="8" fill="#0f172a" />
+
+    <!-- Certificate ID Pill Badge -->
+    <rect x="90" y="15" width="230" height="42" rx="21" fill="#f8fafc" stroke="#0f172a" stroke-width="1.8" />
+    <text x="115" y="31" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="10" fill="#64748b" letter-spacing="1">CERTIFICATE ID</text>
+    <text x="115" y="47" font-family="monospace" font-weight="800" font-size="12" fill="#0f172a" letter-spacing="0.5">ID-INTERN261650</text>
+
+    <!-- DPIIT #startupindia -->
+    <g transform="translate(490, 10)">
+      <text x="0" y="24" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="22" fill="#1e293b" letter-spacing="-0.5">DPIIT</text>
+      <text x="0" y="44" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="13" fill="#ea580c">#startupindia</text>
+      <line x1="0" y1="52" x2="80" y2="52" stroke="#000000" stroke-width="2" />
+      <line x1="80" y1="46" x2="80" y2="52" stroke="#000000" stroke-width="2" />
+    </g>
+
+    <!-- ISO 9001:2015 Seal -->
+    <g transform="translate(620, 5)">
+      <circle cx="28" cy="28" r="26" fill="none" stroke="#0284c7" stroke-width="2.5" />
+      <circle cx="28" cy="28" r="22" fill="#f0f9ff" />
+      <text x="28" y="22" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="10" fill="#0369a1">ISO</text>
+      <text x="28" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="8" fill="#0284c7">9001:2015</text>
+      <path d="M 12 18 C 18 10, 38 10, 44 18" fill="none" stroke="#0284c7" stroke-width="1" stroke-dasharray="2,2" />
+      <path d="M 12 38 C 18 46, 38 46, 44 38" fill="none" stroke="#0284c7" stroke-width="1" stroke-dasharray="2,2" />
+    </g>
+
+    <!-- MSME Emblem -->
+    <g transform="translate(710, 10)">
+      <rect x="0" y="0" width="90" height="34" rx="4" fill="#1e3a8a" />
+      <!-- MSME stylized white bar pattern -->
+      <path d="M 8 26 L 8 8 L 16 26 L 24 8 L 24 26" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round" />
+      <path d="M 32 26 L 32 8 L 40 8 L 40 17 L 32 17 L 40 26" fill="none" stroke="#ffffff" stroke-width="2" />
+      <path d="M 48 26 L 48 8 L 56 26 L 64 8 L 64 26" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round" />
+      <path d="M 72 26 L 72 8 L 82 8 M 72 17 L 80 17 M 72 26 L 82 26" fill="none" stroke="#ffffff" stroke-width="2" />
+      <text x="0" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">MICRO, SMALL &amp; MEDIUM ENTERPRISES</text>
+      <text x="0" y="55" font-family="system-ui, -apple-system, sans-serif" font-size="6.5" fill="#475569">सूक्ष्म, लघु एवं मध्यम उद्यम</text>
+    </g>
+
+    <!-- 3SKILL Circular Seal -->
+    <g transform="translate(860, 2)">
+      <circle cx="32" cy="32" r="30" fill="#f8fafc" stroke="#1e3a8a" stroke-width="2.5" stroke-dasharray="3,2" />
+      <circle cx="32" cy="32" r="25" fill="none" stroke="#1e3a8a" stroke-width="1.5" />
+      <circle cx="32" cy="32" r="18" fill="#1e3a8a" />
+      <!-- Inner star/flower pattern in stamp -->
+      <polygon points="32,18 35,26 44,26 37,31 40,39 32,34 24,39 27,31 20,26 29,26" fill="#ffffff" />
+      <text x="32" y="8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="5" font-weight="900" fill="#1e3a8a">3SKILL EDTECH PVT. LTD.</text>
+      <text x="32" y="59" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="5" font-weight="900" fill="#1e3a8a">ODISHA, INDIA</text>
+    </g>
+  </g>
+</svg>
