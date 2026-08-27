@@ -157,7 +157,7 @@ export const ProfileAvatar: React.FC<ProfileAvatarProps> = ({
               </span>
             </div>
           )}
-
+</div>
           {/* Cyber Scanline Light Sweep on Hover */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/15 to-transparent -translate-y-full group-hover:translate-y-full transition-transform duration-1000 pointer-events-none" />
 
