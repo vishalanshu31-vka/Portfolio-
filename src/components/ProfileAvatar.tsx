@@ -140,7 +140,7 @@ export const ProfileAvatar: React.FC<ProfileAvatarProps> = ({
         <div className="w-full h-full rounded-full overflow-hidden bg-zinc-950 relative border-2 border-black/80 flex items-center justify-center">
           {!imageError ? (
             <img
-              src={defaultPortraitImage}
+              src="/Portfolio-/profile.jpeg"
               alt="Vishal Kumar Anshu"
               referrerPolicy="no-referrer"
               onError={() => setImageError(true)}
@@ -161,31 +161,6 @@ export const ProfileAvatar: React.FC<ProfileAvatarProps> = ({
           {/* Cyber Scanline Light Sweep on Hover */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/15 to-transparent -translate-y-full group-hover:translate-y-full transition-transform duration-1000 pointer-events-none" />
 
-          {/* Interactive Edit / Change Photo Overlay (Hero Size) */}
-          {interactive && size === 'hero' && (
-            <div
-              onClick={() => fileInputRef.current?.click()}
-              className={`absolute inset-0 bg-black/65 backdrop-blur-xs flex flex-col items-center justify-center text-white cursor-pointer transition-opacity duration-300 ${
-                isHovered ? 'opacity-100' : 'opacity-0 pointer-events-none'
-              }`}
-              title="Click to change or upload profile photo"
-            >
-              <Camera className="w-6 h-6 text-red-400 mb-1 animate-bounce" />
-              <span className="text-[10px] font-mono font-bold tracking-widest uppercase text-white/90">
-                UPDATE PHOTO
-              </span>
-              {customImage && (
-                <button
-                  onClick={handleResetAvatar}
-                  className="mt-1.5 px-2 py-0.5 rounded bg-red-950/80 border border-red-500/40 text-[9px] font-mono text-red-300 hover:bg-red-900"
-                >
-                  Reset Default
-                </button>
-              )}
-            </div>
-          )}
-        </div>
-      </div>
 
       {/* Tactical Status Badge at Bottom */}
       {showBadge && (
